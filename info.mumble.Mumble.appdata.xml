@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>info.mumble.Mumble</id>
   <name>Mumble</name>
@@ -15,6 +15,9 @@
   </content_rating>
   <url type="homepage">https://wiki.mumble.info/wiki/Main_Page</url>
   <url type="bugtracker">https://github.com/mumble-voip/mumble/issues</url>
+  <url type="help">https://wiki.mumble.info/wiki/Main_Page</url>
+  <url type="translate">https://wiki.mumble.info/wiki/Language_Translation</url>
+  <update_contact>jbb_AT_kaidan.im</update_contact>
   <launchable type="desktop-id">info.mumble.Mumble.desktop</launchable>
   <screenshots>
     <screenshot type="default">
@@ -23,7 +26,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.3.0-rc1" date="2019-03-17" type="development" />
+    <release type="development" date="2019-03-17" version="1.3.0-rc1"/>
   </releases>
   <provides>
     <binary>mumble</binary>
