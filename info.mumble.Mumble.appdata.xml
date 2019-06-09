@@ -9,6 +9,10 @@
   <description>
     <p>Mumble is a low-latency, high quality voice chat program for gaming.</p>
   </description>
+  <content_rating type="oars-1.0">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-audio">intense</content_attribute>
+  </content_rating>
   <url type="homepage">https://wiki.mumble.info/wiki/Main_Page</url>
   <url type="bugtracker">https://github.com/mumble-voip/mumble/issues</url>
   <launchable type="desktop-id">info.mumble.Mumble.desktop</launchable>
