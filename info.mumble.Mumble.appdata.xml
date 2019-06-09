@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2019 Jonah Brüchert -->
 <component type="desktop-application">
   <id>info.mumble.Mumble</id>
   <name>Mumble</name>
@@ -22,7 +23,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Mumble default light skin</caption>
-      <image type="soure">https://wiki.mumble.info/images/6/6b/Metromumble_light_preview.png</image>
+      <image type="soure">https://screenshots.debian.net/screenshots/000/017/126/large.png</image>
     </screenshot>
   </screenshots>
   <releases>
