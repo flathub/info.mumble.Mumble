@@ -27,6 +27,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="development" date="2019-07-10" version="1.3.0-rc2"/>
     <release type="development" date="2019-03-17" version="1.3.0-rc1"/>
   </releases>
   <provides>
