@@ -66,6 +66,27 @@ modules:
         url: https://github.com/lathiat/avahi
         tag: v0.7
 
+  - name: dotconf
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: http://deb.debian.org/debian/pool/main/d/dotconf/dotconf_1.3.orig.tar.gz
+        sha256: d7c5eab8e9785ea0186676f0ccc4261e196b7559943030f869169eb748d34178
+      - type: shell
+        commands:
+          - autoheader
+          - aclocal
+          - autoconf
+          - libtoolize
+          - automake --add-missing
+
+  - name: speechd
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://freebsoft.org/pub/projects/speechd/speech-dispatcher-0.8.8.tar.gz
+        sha256: 3c2a89800d73403192b9d424a604f0e614c58db390428355a3b1c7c401986cf3
+
   - name: mumble
     buildsystem: qmake
     config-opts:
