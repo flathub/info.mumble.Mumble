@@ -14,7 +14,7 @@
     <content_attribute id="social-chat">intense</content_attribute>
     <content_attribute id="social-audio">intense</content_attribute>
   </content_rating>
-  <url type="homepage">https://wiki.mumble.info/wiki/Main_Page</url>
+  <url type="homepage">https://www.mumble.info/</url>
   <url type="bugtracker">https://github.com/mumble-voip/mumble/issues</url>
   <url type="help">https://wiki.mumble.info/wiki/Main_Page</url>
   <url type="translate">https://wiki.mumble.info/wiki/Language_Translation</url>
