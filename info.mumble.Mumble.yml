@@ -2,7 +2,7 @@ id: info.mumble.Mumble
 rename-desktop-file: mumble.desktop
 rename-icon: mumble
 runtime: org.kde.Platform
-runtime-version: '5.12'
+runtime-version: '5.13'
 sdk: org.kde.Sdk
 command: mumble
 finish-args:
@@ -21,6 +21,7 @@ cleanup:
   - /lib/pkgconfig
   - /bin/protoc
   - /bin/avahi-*
+  - /bin/intltool-*
   - /lib/*.a
 modules:
   - name: boost
@@ -41,6 +42,13 @@ modules:
       - type: git
         url: https://github.com/google/protobuf
         tag: v3.9.1
+
+  - name: intltool
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
+        sha256: 67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd
 
   - name: avahi
     buildsystem: autotools
@@ -76,6 +84,7 @@ modules:
       - CONFIG+=no-g15
       - CONFIG+=no-speechd
       - DEFINES+=NO_UPDATE_CHECK
+      - CONFIG+=no-embed-qt-translations
     post-install:
       - mkdir -p ${FLATPAK_DEST}/lib/mumble/ ${FLATPAK_DEST}/share/pixmaps/ ${FLATPAK_DEST}/share/icons/hicolor/scalable${FLATPAK_DEST}s/
         ${FLATPAK_DEST}/share/applications/ ${FLATPAK_DEST}/share/services/
