@@ -16,6 +16,11 @@ finish-args:
   - --talk-name=org.kde.StatusNotifierWatcher
   - --own-name=org.kde.StatusNotifierItem-2-2
 separate-locales: false
+add-extensions:
+  org.freedesktop.Platform.ffmpeg-full:
+    directory: lib/ffmpeg
+    version: 19.08
+    add-ld-path: .
 cleanup:
   - /include
   - /lib/pkgconfig
