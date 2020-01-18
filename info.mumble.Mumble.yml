@@ -21,9 +21,10 @@ cleanup:
   - /lib/pkgconfig
   - /bin/protoc
   - /bin/avahi-*
-  - /bin/intltool-*
   - /lib/*.a
 modules:
+  - shared-modules/intltool/intltool-0.51.json
+
   - name: boost
     sources:
       - type: archive
@@ -42,13 +43,6 @@ modules:
       - type: git
         url: https://github.com/google/protobuf
         tag: v3.9.1
-
-  - name: intltool
-    buildsystem: autotools
-    sources:
-      - type: archive
-        url: https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
-        sha256: 67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd
 
   - name: avahi
     buildsystem: autotools
