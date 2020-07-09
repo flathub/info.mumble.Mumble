@@ -98,7 +98,7 @@ modules:
       - type: git
         url: https://github.com/mumble-voip/mumble
         tag: 1.3.2
-        commit: b0f9837e8248ce2796511f90d0fd27291ea026fd
+        commit: 1c7650995458e7a2630c5bcacb8ef38403b99c31
         disable-shallow-clone: true
       - type: file
         path: info.mumble.Mumble.appdata.xml
