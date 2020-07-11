@@ -98,7 +98,6 @@ modules:
       - CONFIG+=packaged
       - CONFIG+=c++11
       - CONFIG+=no-g15
-      - CONFIG+=no-speechd
       - DEFINES+=NO_UPDATE_CHECK
       - CONFIG+=no-embed-qt-translations
     post-install:
