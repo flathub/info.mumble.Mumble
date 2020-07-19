@@ -43,7 +43,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/protobuf
-        tag: v3.9.1
+        tag: v3.12.3
 
   - name: avahi
     buildsystem: autotools
@@ -61,10 +61,11 @@ modules:
       - --disable-libdaemon
       - --disable-daemon
       - --enable-compat-libdns_sd
+      - --disable-libevent
     sources:
       - type: git
         url: https://github.com/lathiat/avahi
-        tag: v0.7
+        tag: v0.8
 
   - name: mumble
     buildsystem: qmake
