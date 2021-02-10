@@ -16,7 +16,7 @@ finish-args:
   - --talk-name=org.kde.StatusNotifierWatcher
   - --own-name=org.kde.StatusNotifierItem-2-2
   - --filesystem=home
-  - --env=LD_LIBRARY_PATH=/app/lib/mumble/
+  - --env=LD_LIBRARY_PATH=/app/lib/mumble/:/app/lib
 separate-locales: false
 cleanup:
   - /include
