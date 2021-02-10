@@ -30,8 +30,8 @@ modules:
   - name: boost
     sources:
       - type: archive
-        url: https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.bz2
-        sha256: d73a8da01e8bf8c7eda40b4c84915071a8c8a0df4a6734537ddde4a8580524ee
+        url: https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.bz2
+        sha256: 953db31e016db7bb207f11432bef7df100516eeb746843fa0486a222e3fd49cb
     buildsystem: simple
     build-commands:
       - ./bootstrap.sh --prefix=${FLATPAK_DEST}
@@ -44,7 +44,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/protobuf
-        tag: v3.12.3
+        tag: v3.14.0
+        commit: 2514f0bd7da7e2af1bed4c5d1b84f031c4d12c10
 
   - name: avahi
     buildsystem: autotools
@@ -67,6 +68,7 @@ modules:
       - type: git
         url: https://github.com/lathiat/avahi
         tag: v0.8
+        commit: f060abee2807c943821d88839c013ce15db17b58
 
   - name: mumble
     buildsystem: qmake
@@ -99,8 +101,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/mumble-voip/mumble
-        tag: 1.3.3
-        commit: 6efbd836ea579ceabe007e3ce1f2ebfbd835cf48
+        tag: 1.3.4
+        commit: c0b5be7134673fa1c4c434b72552c200bca37b8d
         disable-shallow-clone: true
       - type: file
         path: info.mumble.Mumble.appdata.xml
