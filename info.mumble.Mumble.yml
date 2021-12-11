@@ -2,7 +2,7 @@ id: info.mumble.Mumble
 rename-desktop-file: mumble.desktop
 rename-icon: mumble
 runtime: org.kde.Platform
-runtime-version: '5.15'
+runtime-version: '5.15-21.08'
 sdk: org.kde.Sdk
 command: mumble
 finish-args:
@@ -30,7 +30,7 @@ modules:
   - name: boost
     sources:
       - type: archive
-        url: https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.bz2
+        url: https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75_0.tar.bz2
         sha256: 953db31e016db7bb207f11432bef7df100516eeb746843fa0486a222e3fd49cb
     buildsystem: simple
     build-commands:
@@ -99,10 +99,8 @@ modules:
     build-commands:
       - install -Dm644 -t ${FLATPAK_DEST}/share/appdata ${FLATPAK_ID}.appdata.xml
     sources:
-      - type: git
-        url: https://github.com/mumble-voip/mumble
-        tag: 1.3.4
-        commit: c0b5be7134673fa1c4c434b72552c200bca37b8d
-        disable-shallow-clone: true
+      - type: archive
+        url: https://github.com/mumble-voip/mumble/releases/download/1.3.4/mumble-1.3.4.tar.gz
+        sha256: 615f4ebfc3385d945163f369efd3e910c8b6d0f025797a7eed541515fccb6093
       - type: file
         path: info.mumble.Mumble.appdata.xml
