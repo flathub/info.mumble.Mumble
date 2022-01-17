@@ -89,6 +89,8 @@ modules:
       - -Dserver=OFF
       - -Doverlay=OFF
       - -Dplugins=OFF
+    post-install:
+      - sed -i 's/org.mumble_voip.mumble/info.mumble.Mumble/g' /app/share/metainfo/org.mumble_voip.mumble.appdata.xml
     sources:
       - type: git
         url: https://github.com/mumble-voip/mumble/
