@@ -95,3 +95,5 @@ modules:
         commit: 8505df958fc16a6f3ad902d84aed415742c5bb20
       - type: patch
         path: 0001-Improve-appstream-metadata.patch
+      - type: patch
+        path: 0002-Fix-PipeWire-not-being-usable-in-Flatpaks.patch
