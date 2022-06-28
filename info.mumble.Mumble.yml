@@ -33,6 +33,7 @@ modules:
       - type: archive
         url: https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2
         sha256: 8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc
+
     buildsystem: simple
     build-commands:
       - ./bootstrap.sh --prefix=${FLATPAK_DEST}
@@ -43,10 +44,14 @@ modules:
   - name: protobuf
     buildsystem: autotools
     sources:
-      - type: git
-        url: https://github.com/google/protobuf
-        tag: v3.19.3
-        commit: cc7b1b53234cd7a8f50d90ac3933b240dcf4cd97
+      - type: archive
+        url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v3.19.3.tar.gz
+        sha256: 390191a0d7884b3e52bb812c440ad1497b9d484241f37bb8e2ccc8c2b72d6c36
+        x-checker-data:
+          type: anitya
+          project-id: 3715
+          stable-only: true
+          url-template: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v$version.tar.gz
 
   - name: avahi
     buildsystem: autotools
@@ -91,10 +96,14 @@ modules:
       - -Dplugins=OFF
       - -DBUILD_NUMBER=230
     sources:
-      - type: git
-        url: https://github.com/mumble-voip/mumble/
-        tag: v1.4.230
-        commit: 8505df958fc16a6f3ad902d84aed415742c5bb20
+      - type: archive
+        url: https://github.com/mumble-voip/mumble/archive/refs/tags/v1.4.230.tar.gz
+        sha256: 0a6591568a2d63b7a6bb29a3b10e4289a34dfd75e33cb2143ae6c738b1e92983
+        x-checker-data:
+          type: anitya
+          project-id: 2032
+          stable-only: true
+          url-template: https://github.com/mumble-voip/mumble/archive/refs/tags/v$version.tar.gz
       - type: patch
         path: 0001-Improve-appstream-metadata.patch
       - type: patch
