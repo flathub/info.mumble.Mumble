@@ -96,14 +96,10 @@ modules:
       - -Dplugins=OFF
       - -DBUILD_NUMBER=230
     sources:
-      - type: archive
-        url: https://github.com/mumble-voip/mumble/archive/refs/tags/v1.4.230.tar.gz
-        sha256: 0a6591568a2d63b7a6bb29a3b10e4289a34dfd75e33cb2143ae6c738b1e92983
-        x-checker-data:
-          type: anitya
-          project-id: 2032
-          stable-only: true
-          url-template: https://github.com/mumble-voip/mumble/archive/refs/tags/v$version.tar.gz
+      - type: git
+        url: https://github.com/mumble-voip/mumble/
+        tag: v1.4.230
+        commit: 8505df958fc16a6f3ad902d84aed415742c5bb20
       - type: patch
         path: 0001-Improve-appstream-metadata.patch
       - type: patch
