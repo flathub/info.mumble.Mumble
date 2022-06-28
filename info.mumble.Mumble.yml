@@ -1,7 +1,7 @@
 id: info.mumble.Mumble
 rename-icon: mumble
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: 5.15-21.08
 sdk: org.kde.Sdk
 command: mumble
 finish-args:
@@ -45,8 +45,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v3.19.3.tar.gz
-        sha256: 390191a0d7884b3e52bb812c440ad1497b9d484241f37bb8e2ccc8c2b72d6c36
+        url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.2.tar.gz
+        sha256: ca983c9d2c8f8c935513642bcc4b2cbc64e4046e0bb16bf2ff893128577ece8c
         x-checker-data:
           type: anitya
           project-id: 3715
@@ -79,9 +79,9 @@ modules:
   - name: poco
     buildsystem: cmake-ninja
     sources:
-    - type: archive
-      url: https://github.com/pocoproject/poco/archive/poco-1.11.1-release.tar.gz
-      sha256: 2412a5819a239ff2ee58f81033bcc39c40460d7a8b330013a687c8c0bd2b4ac0
+      - type: archive
+        url: https://github.com/pocoproject/poco/archive/poco-1.11.1-release.tar.gz
+        sha256: 2412a5819a239ff2ee58f81033bcc39c40460d7a8b330013a687c8c0bd2b4ac0
     cleanup:
       - /include/
       - /bin/
