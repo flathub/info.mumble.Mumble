@@ -96,11 +96,11 @@ modules:
       - -Dplugins=OFF
       - -DBUILD_NUMBER=230
     sources:
-      - type: git
-        url: https://github.com/mumble-voip/mumble/
-        tag: v1.4.230
-        commit: 8505df958fc16a6f3ad902d84aed415742c5bb20
-      - type: patch
-        path: 0001-Improve-appstream-metadata.patch
-      - type: patch
-        path: 0002-Fix-PipeWire-not-being-usable-in-Flatpaks.patch
+      - type: archive
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.4.274/mumble-1.4.274.tar.gz
+        sha256: 7ec87ddcccd8929e40062ea6e868f287509d4436c60bbc75606cbf5b6b303b8b
+        x-checker-data:
+          type: anitya
+          project-id: 2032
+          stable-only: true
+          url-template: https://github.com/mumble-voip/mumble/releases/download/v$version.tar.gz
