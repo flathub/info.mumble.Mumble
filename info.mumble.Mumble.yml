@@ -104,6 +104,6 @@ modules:
           type: anitya
           project-id: 2032
           stable-only: true
-          url-template: https://github.com/mumble-voip/mumble/releases/download/v$version.tar.gz
+          url-template: https://github.com/mumble-voip/mumble/releases/download/v$version/mumble-$version.tar.gz
       - type: patch
         path: patches/0001-appstream-Include-release-date.patch
