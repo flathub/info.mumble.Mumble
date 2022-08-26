@@ -95,6 +95,7 @@ modules:
       - -Doverlay=OFF
       - -Dplugins=OFF
       - -DBUILD_NUMBER=274
+      - -DBUILD_RELEASE_DATE=2022-08-21
     sources:
       - type: archive
         url: https://github.com/mumble-voip/mumble/releases/download/v1.4.274/mumble-1.4.274.tar.gz
@@ -104,3 +105,5 @@ modules:
           project-id: 2032
           stable-only: true
           url-template: https://github.com/mumble-voip/mumble/releases/download/v$version.tar.gz
+      - type: patch
+        path: patches/0001-appstream-Include-release-date.patch
