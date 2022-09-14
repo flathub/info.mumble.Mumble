@@ -94,16 +94,14 @@ modules:
       - -Dserver=OFF
       - -Doverlay=OFF
       - -Dplugins=OFF
-      - -DBUILD_NUMBER=274
-      - -DBUILD_RELEASE_DATE=2022-08-21
+      - -DBUILD_NUMBER=287
+      - -DBUILD_RELEASE_DATE=2022-09-14
     sources:
       - type: archive
-        url: https://github.com/mumble-voip/mumble/releases/download/v1.4.274/mumble-1.4.274.tar.gz
-        sha256: 7ec87ddcccd8929e40062ea6e868f287509d4436c60bbc75606cbf5b6b303b8b
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.4.287/mumble-1.4.287.tar.gz
+        sha256: 378e61d5bfa58ba51bfbb645067f459214a9872da09b306f2c2c3f1902200547
         x-checker-data:
           type: anitya
           project-id: 2032
           stable-only: true
           url-template: https://github.com/mumble-voip/mumble/releases/download/v$version/mumble-$version.tar.gz
-      - type: patch
-        path: patches/0001-appstream-Include-release-date.patch
