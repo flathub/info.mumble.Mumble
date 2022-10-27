@@ -45,8 +45,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.7.tar.gz
-        sha256: 75be42bd736f4df6d702a0e4e4d30de9ee40eac024c4b845d17ae4cc831fe4ae
+        url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.9.tar.gz
+        sha256: 0aa7df8289c957a4c54cbe694fbabe99b180e64ca0f8fdb5e2f76dcf56ff2422
         x-checker-data:
           type: anitya
           project-id: 3715
