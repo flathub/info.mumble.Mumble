@@ -7,14 +7,14 @@ command: mumble
 finish-args:
   - --share=ipc
   - --share=network
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
   - --device=all
   - --own-name=net.sourceforge.mumble.mumble
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
-  - --own-name=org.kde.StatusNotifierItem-2-2
+  - --own-name=org.kde.* # This seems wrong, we should reconsider when https://github.com/flathub/flatpak-builder-lint/issues/66 is fixed
   - --filesystem=home
   - --filesystem=xdg-run/pipewire-0:ro
   - --env=LD_LIBRARY_PATH=/app/lib/mumble/:/app/lib
