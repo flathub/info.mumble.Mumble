@@ -45,8 +45,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.11.tar.gz
-        sha256: b1d6dd2cbb5d87e17af41cadb720322ce7e13af826268707bd8db47e5654770b
+        url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.12.tar.gz
+        sha256: 22fdaf641b31655d4b2297f9981fa5203b2866f8332d3c6333f6b0107bb320de
         x-checker-data:
           type: anitya
           project-id: 3715
@@ -79,7 +79,7 @@ modules:
   - name: poco
     buildsystem: cmake-ninja
     config-opts:
-       - -DPOCO_UNBUNDLED=ON
+      - -DPOCO_UNBUNDLED=ON
     sources:
       - type: archive
         url: https://github.com/pocoproject/poco/archive/poco-1.12.4-release.tar.gz
