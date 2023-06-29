@@ -1,7 +1,7 @@
 id: info.mumble.Mumble
 rename-icon: mumble
 runtime: org.kde.Platform
-runtime-version: 5.15-22.08
+runtime-version: 5.15-21.08
 sdk: org.kde.Sdk
 command: mumble
 finish-args:
@@ -80,7 +80,6 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DPOCO_UNBUNDLED=ON
-      - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
         url: https://github.com/pocoproject/poco/archive/poco-1.12.4-release.tar.gz
@@ -99,7 +98,6 @@ modules:
       - -Dplugins=OFF
       - -DBUILD_NUMBER=287
       - -DBUILD_RELEASE_DATE=2022-09-14
-      - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
         url: https://github.com/mumble-voip/mumble/releases/download/v1.4.287/mumble-1.4.287.tar.gz
@@ -109,5 +107,3 @@ modules:
           project-id: 2032
           stable-only: true
           url-template: https://github.com/mumble-voip/mumble/releases/download/v$version/mumble-$version.tar.gz
-      - type: patch
-        path: patches/f4cea62ed95e4967d8591f25e903f5e8fc2e2a30.patch
