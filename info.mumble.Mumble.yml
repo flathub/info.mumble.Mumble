@@ -1,7 +1,7 @@
 id: info.mumble.Mumble
 rename-icon: mumble
 runtime: org.kde.Platform
-runtime-version: 5.15-21.08
+runtime-version: 5.15-22.08
 sdk: org.kde.Sdk
 command: mumble
 finish-args:
@@ -106,3 +106,7 @@ modules:
           project-id: 2032
           stable-only: true
           url-template: https://github.com/mumble-voip/mumble/releases/download/v$version/mumble-$version.tar.gz
+      - type: patch
+        path: openssl-3.0.patch
+      - type: patch
+        path: fix-crypto-crash.patch
