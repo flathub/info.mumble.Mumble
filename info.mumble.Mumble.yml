@@ -40,17 +40,37 @@ modules:
       - mkdir -p ${FLATPAK_DEST}/include/boost
       - cp -r boost/* ${FLATPAK_DEST}/include/boost
 
-  - name: protobuf
-    buildsystem: autotools
+  - name: abseil-cpp
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DBUILD_SHARED_LIBS=ON
+      - -DABSL_PROPAGATE_CXX_STD=ON
+      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.12.tar.gz
-        sha256: 22fdaf641b31655d4b2297f9981fa5203b2866f8332d3c6333f6b0107bb320de
+        url: https://github.com/abseil/abseil-cpp/archive/refs/tags/20230802.1.tar.gz
+        sha256: 987ce98f02eefbaf930d6e38ab16aa05737234d7afbab2d5c4ea7adbe50c28ed
+        x-checker-data:
+          type: anitya
+          project-id: 115295
+          stable-only: true
+          url-template: https://github.com/abseil/abseil-cpp/archive/refs/tags/$version.tar.gz
+
+  - name: protobuf
+    buildsystem: cmake-ninja
+    config-opts:
+     - -Dprotobuf_BUILD_TESTS=OFF
+     - -Dprotobuf_ABSL_PROVIDER=package
+    sources:
+      - type: archive
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v24.3/protobuf-24.3.tar.gz
+        sha256: 07d69502e58248927b58c7d7e7424135272ba5b2852a753ab6b67e62d2d29355
         x-checker-data:
           type: anitya
           project-id: 3715
           stable-only: true
-          url-template: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v$version.tar.gz
+          url-template: https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-$version.tar.gz
 
   - name: avahi
     buildsystem: autotools
