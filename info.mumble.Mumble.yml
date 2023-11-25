@@ -6,6 +6,7 @@ sdk: org.kde.Sdk
 command: mumble
 finish-args:
   - --share=ipc
+  - --device=dri
   - --share=network
   - --socket=fallback-x11
   - --socket=wayland
