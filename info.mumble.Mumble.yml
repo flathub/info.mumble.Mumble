@@ -14,7 +14,6 @@ finish-args:
   - --own-name=net.sourceforge.mumble.mumble
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
-  - --filesystem=home
   - --filesystem=xdg-run/pipewire-0:ro
   - --env=LD_LIBRARY_PATH=/app/lib/mumble/:/app/lib
 separate-locales: false
