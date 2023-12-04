@@ -107,8 +107,8 @@ modules:
       - -DPOCO_UNBUNDLED=ON
     sources:
       - type: archive
-        url: https://github.com/pocoproject/poco/archive/poco-1.12.5p1-release.tar.gz
-        sha256: 8ba10b69c815e95e1c8776af0143aa8603088b84e3f6a8447994c6b92d7522f0
+        url: https://github.com/pocoproject/poco/archive/poco-1.12.5p2-release.tar.gz
+        sha256: 08d201bb287cb59e13577901758aeb3ced7ea44627c79f5c162eb60323812685
         x-checker-data:
           type: anitya
           project-id: 5418
