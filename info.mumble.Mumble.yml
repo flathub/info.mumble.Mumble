@@ -31,8 +31,8 @@ modules:
   - name: boost
     sources:
       - type: archive
-        url: https://github.com/boostorg/boost/releases/download/boost-1.83.0/boost-1.83.0.tar.gz
-        sha256: 0c6049764e80aa32754acd7d4f179fd5551d8172a83b71532ae093e7384e98da
+        url: https://github.com/boostorg/boost/releases/download/boost-1.84.0/boost-1.84.0.tar.gz
+        sha256: 4d27e9efed0f6f152dc28db6430b9d3dfb40c0345da7342eaa5a987dde57bd95
         x-checker-data:
           type: anitya
           project-id: 6845
