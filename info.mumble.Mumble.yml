@@ -109,8 +109,8 @@ modules:
       - -DPOCO_UNBUNDLED=ON
     sources:
       - type: archive
-        url: https://github.com/pocoproject/poco/archive/poco-1.13.1-release.tar.gz
-        sha256: 8accf6c6ebb9ae686e7c8e2390a35beaab08d0ca1abda537cc2d0b7ab9296be5
+        url: https://github.com/pocoproject/poco/archive/poco-1.13.2-release.tar.gz
+        sha256: c01221870aa9bccedf1de39890279699207848fe61a0cfb6aeec7c5942c4627f
         x-checker-data:
           type: anitya
           project-id: 5418
@@ -132,8 +132,8 @@ modules:
       - -DBUILD_RELEASE_DATE=2022-09-14
     sources:
       - type: archive
-        url: https://github.com/mumble-voip/mumble/releases/download/v1.4.287/mumble-1.4.287.tar.gz
-        sha256: 378e61d5bfa58ba51bfbb645067f459214a9872da09b306f2c2c3f1902200547
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.613/mumble-1.5.613.tar.gz
+        sha256: 157d8f4bbcc0f1d91a4795927fb30bdadf196da6fbff216b8eb0c5b2e0e0f746
         x-checker-data:
           type: anitya
           project-id: 2032
