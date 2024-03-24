@@ -1,20 +1,21 @@
 id: info.mumble.Mumble
 rename-icon: mumble
 runtime: org.kde.Platform
-runtime-version: 5.15-22.08
+runtime-version: 5.15-23.08
 sdk: org.kde.Sdk
 command: mumble
 finish-args:
   - --share=ipc
+  - --device=dri
+  # For ALSA (for attenuation)
+  - --device=all
   - --share=network
   - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
-  - --device=all
   - --own-name=net.sourceforge.mumble.mumble
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
-  - --filesystem=home
   - --filesystem=xdg-run/pipewire-0:ro
   - --env=LD_LIBRARY_PATH=/app/lib/mumble/:/app/lib
 separate-locales: false
@@ -30,15 +31,18 @@ modules:
   - name: boost
     sources:
       - type: archive
-        url: https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0_rc1.tar.bz2
-        sha256: 71feeed900fbccca04a3b4f2f84a7c217186f28a940ed8b7ed4725986baf99fa
-
+        url: https://github.com/boostorg/boost/releases/download/boost-1.84.0/boost-1.84.0.tar.gz
+        sha256: 4d27e9efed0f6f152dc28db6430b9d3dfb40c0345da7342eaa5a987dde57bd95
+        x-checker-data:
+          type: anitya
+          project-id: 6845
+          stable-only: true
+          url-template: https://github.com/boostorg/boost/releases/download/boost-$version/boost-$version.tar.gz
     buildsystem: simple
     build-commands:
-      - ./bootstrap.sh --prefix=${FLATPAK_DEST}
+      - ./bootstrap.sh --prefix=${FLATPAK_DEST} --with-libraries=headers
       - ./b2 -j ${FLATPAK_BUILDER_N_JOBS} headers
-      - mkdir -p ${FLATPAK_DEST}/include/boost
-      - cp -r boost/* ${FLATPAK_DEST}/include/boost
+      - ./b2 -j ${FLATPAK_BUILDER_N_JOBS} install --layout=system
 
   - name: abseil-cpp
     buildsystem: cmake-ninja
@@ -49,8 +53,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://github.com/abseil/abseil-cpp/archive/refs/tags/20230802.1.tar.gz
-        sha256: 987ce98f02eefbaf930d6e38ab16aa05737234d7afbab2d5c4ea7adbe50c28ed
+        url: https://github.com/abseil/abseil-cpp/archive/refs/tags/20240116.1.tar.gz
+        sha256: 3c743204df78366ad2eaf236d6631d83f6bc928d1705dd0000b872e53b73dc6a
         x-checker-data:
           type: anitya
           project-id: 115295
@@ -60,12 +64,12 @@ modules:
   - name: protobuf
     buildsystem: cmake-ninja
     config-opts:
-     - -Dprotobuf_BUILD_TESTS=OFF
-     - -Dprotobuf_ABSL_PROVIDER=package
+      - -Dprotobuf_BUILD_TESTS=OFF
+      - -Dprotobuf_ABSL_PROVIDER=package
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v24.3/protobuf-24.3.tar.gz
-        sha256: 07d69502e58248927b58c7d7e7424135272ba5b2852a753ab6b67e62d2d29355
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v26.0/protobuf-26.0.tar.gz
+        sha256: e32100a8013870d24ffc37dad6781a61e5d0c99501bcb04d39c340a1c44a8e63
         x-checker-data:
           type: anitya
           project-id: 3715
@@ -90,10 +94,14 @@ modules:
       - --enable-compat-libdns_sd
       - --disable-libevent
     sources:
-      - type: git
-        url: https://github.com/lathiat/avahi
-        tag: v0.8
-        commit: f060abee2807c943821d88839c013ce15db17b58
+      - type: archive
+        url: https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz
+        sha256: 060309d7a333d38d951bc27598c677af1796934dbd98e1024e7ad8de798fedda
+        x-checker-data:
+          type: anitya
+          project-id: 147
+          stable-only: true
+          url-template: https://github.com/lathiat/avahi/releases/download/v$version/avahi-$version.tar.gz
 
   - name: poco
     buildsystem: cmake-ninja
@@ -101,8 +109,13 @@ modules:
       - -DPOCO_UNBUNDLED=ON
     sources:
       - type: archive
-        url: https://github.com/pocoproject/poco/archive/poco-1.12.4-release.tar.gz
-        sha256: 71ef96c35fced367d6da74da294510ad2c912563f12cd716ab02b6ed10a733ef
+        url: https://github.com/pocoproject/poco/archive/poco-1.13.2-release.tar.gz
+        sha256: c01221870aa9bccedf1de39890279699207848fe61a0cfb6aeec7c5942c4627f
+        x-checker-data:
+          type: anitya
+          project-id: 5418
+          stable-only: true
+          url-template: https://github.com/pocoproject/poco/archive/poco-$version-release.tar.gz
     cleanup:
       - /include/
       - /bin/
