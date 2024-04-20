@@ -132,8 +132,8 @@ modules:
       - -DBUILD_RELEASE_DATE=2022-09-14
     sources:
       - type: archive
-        url: https://github.com/mumble-voip/mumble/releases/download/v1.4.287/mumble-1.4.287.tar.gz
-        sha256: 378e61d5bfa58ba51bfbb645067f459214a9872da09b306f2c2c3f1902200547
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.629/mumble-1.5.629.tar.gz
+        sha256: c8bf6bd53bbcb2c2b51b53262819a06165832ff8b5efe55b14a78d8d41a494af
         x-checker-data:
           type: anitya
           project-id: 2032
