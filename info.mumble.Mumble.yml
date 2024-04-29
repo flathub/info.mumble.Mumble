@@ -128,18 +128,14 @@ modules:
       - -Dserver=OFF
       - -Doverlay=OFF
       - -Dplugins=OFF
-      - -DBUILD_NUMBER=517
+      - -DBUILD_NUMBER=629
       - -DBUILD_RELEASE_DATE=2022-09-14
     sources:
       - type: archive
-        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.517/mumble-1.5.517.tar.gz
-        sha256: 8efd06a0f47ebfe27735f7575ba0becfb21d0f400a5082202dbbd998ab8351de
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.629/mumble-1.5.629.tar.gz
+        sha256: c8bf6bd53bbcb2c2b51b53262819a06165832ff8b5efe55b14a78d8d41a494af
         x-checker-data:
           type: anitya
           project-id: 2032
           stable-only: true
           url-template: https://github.com/mumble-voip/mumble/releases/download/v$version/mumble-$version.tar.gz
-      - type: patch
-        path: openssl-3.0.patch
-      - type: patch
-        path: fix-crypto-crash.patch
