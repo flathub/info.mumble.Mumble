@@ -68,8 +68,8 @@ modules:
       - -Dprotobuf_ABSL_PROVIDER=package
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v26.1/protobuf-26.1.tar.gz
-        sha256: 4fc5ff1b2c339fb86cd3a25f0b5311478ab081e65ad258c6789359cd84d421f8
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v27.1/protobuf-27.1.tar.gz
+        sha256: 6fbe2e6f703bcd3a246529c2cab586ca12a98c4e641f5f71d51fde09eb48e9e7
         x-checker-data:
           type: anitya
           project-id: 3715
