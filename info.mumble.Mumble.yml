@@ -53,8 +53,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://github.com/abseil/abseil-cpp/archive/refs/tags/20240116.2.tar.gz
-        sha256: 733726b8c3a6d39a4120d7e45ea8b41a434cdacde401cba500f14236c49b39dc
+        url: https://github.com/abseil/abseil-cpp/archive/refs/tags/20240722.0.tar.gz
+        sha256: f50e5ac311a81382da7fa75b97310e4b9006474f9560ac46f54a9967f07d4ae3
         x-checker-data:
           type: anitya
           project-id: 115295
@@ -68,8 +68,8 @@ modules:
       - -Dprotobuf_ABSL_PROVIDER=package
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v27.2/protobuf-27.2.tar.gz
-        sha256: e4ff2aeb767da6f4f52485c2e72468960ddfe5262483879ef6ad552e52757a77
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v27.3/protobuf-27.3.tar.gz
+        sha256: 1535151efbc7893f38b0578e83cac584f2819974f065698976989ec71c1af84a
         x-checker-data:
           type: anitya
           project-id: 3715
