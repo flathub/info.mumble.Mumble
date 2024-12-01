@@ -68,8 +68,8 @@ modules:
       - -Dprotobuf_ABSL_PROVIDER=package
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v28.2/protobuf-28.2.tar.gz
-        sha256: b2340aa47faf7ef10a0328190319d3f3bee1b24f426d4ce8f4253b6f27ce16db
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v29.0/protobuf-29.0.tar.gz
+        sha256: 10a0d58f39a1a909e95e00e8ba0b5b1dc64d02997f741151953a2b3659f6e78c
         x-checker-data:
           type: anitya
           project-id: 3715
@@ -109,8 +109,8 @@ modules:
       - -DPOCO_UNBUNDLED=ON
     sources:
       - type: archive
-        url: https://github.com/pocoproject/poco/archive/poco-1.13.3-release.tar.gz
-        sha256: 9f074d230daf30f550c5bde5528037bdab6aa83b2a06c81a25e89dd3bcb7e419
+        url: https://github.com/pocoproject/poco/archive/poco-1.14.0-release.tar.gz
+        sha256: 48e98bbc8ed9fcd8bec43538402181d33cc2abe7e19ac8aea4bc113c9ba8ef89
         x-checker-data:
           type: anitya
           project-id: 5418
