@@ -149,8 +149,8 @@ modules:
       - -DCMAKE_CXX_FLAGS="-Wno-error"
     sources:
       - type: archive
-        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.735/mumble-1.5.735.tar.gz
-        sha256: db8990079f556a877218d471bcf2c24eb5e4520b652f3c20793d0aadedaae6ae
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.634/mumble-1.5.634.tar.gz
+        sha256: 904f3633d28ab0e6925caeff2c65802f586abefdf6d20162f20a71805c2c5929
         x-checker-data:
           type: anitya
           project-id: 2032
