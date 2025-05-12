@@ -128,8 +128,8 @@ modules:
       - sed -i 's,Utf8Proc::Utf8Proc;,,g' /app/lib/cmake/Poco/PocoFoundationTargets.cmake
     sources:
       - type: archive
-        url: https://github.com/pocoproject/poco/archive/poco-1.14.1-release.tar.gz
-        sha256: e711712d68d01e580be315e1cca21d2d10ce941fc3252c0402c0a5732f719445
+        url: https://github.com/pocoproject/poco/archive/poco-1.14.2-release.tar.gz
+        sha256: 47394ea7ddb7b0a40e1a5be896f8f5dc77cfdc4f561d2e7131ecf582df5a0c3a
         x-checker-data:
           type: anitya
           project-id: 5418
