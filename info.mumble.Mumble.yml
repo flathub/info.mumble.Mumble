@@ -43,28 +43,10 @@ modules:
           url-template: https://github.com/boostorg/boost/releases/download/boost-$version/boost-$version-cmake.tar.xz
     buildsystem: cmake-ninja
 
-  - name: abseil-cpp
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DBUILD_SHARED_LIBS=ON
-      - -DABSL_PROPAGATE_CXX_STD=ON
-      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-    sources:
-      - type: archive
-        url: https://github.com/abseil/abseil-cpp/archive/refs/tags/20250512.1.tar.gz
-        sha256: 9b7a064305e9fd94d124ffa6cc358592eb42b5da588fb4e07d09254aa40086db
-        x-checker-data:
-          type: anitya
-          project-id: 115295
-          stable-only: true
-          url-template: https://github.com/abseil/abseil-cpp/archive/refs/tags/$version.tar.gz
-
   - name: protobuf
     buildsystem: cmake-ninja
     config-opts:
       - -Dprotobuf_BUILD_TESTS=OFF
-      - -Dprotobuf_ABSL_PROVIDER=package
     sources:
       - type: archive
         url: https://github.com/protocolbuffers/protobuf/releases/download/v31.1/protobuf-31.1.tar.gz
