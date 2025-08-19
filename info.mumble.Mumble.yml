@@ -34,8 +34,8 @@ modules:
   - name: boost
     sources:
       - type: archive
-        url: https://github.com/boostorg/boost/releases/download/boost-1.88.0/boost-1.88.0-cmake.tar.xz
-        sha256: f48b48390380cfb94a629872346e3a81370dc498896f16019ade727ab72eb1ec
+        url: https://github.com/boostorg/boost/releases/download/boost-1.89.0/boost-1.89.0-cmake.tar.xz
+        sha256: 67acec02d0d118b5de9eb441f5fb707b3a1cdd884be00ca24b9a73c995511f74
         x-checker-data:
           type: anitya
           project-id: 6845
@@ -52,8 +52,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://github.com/abseil/abseil-cpp/archive/refs/tags/20250512.1.tar.gz
-        sha256: 9b7a064305e9fd94d124ffa6cc358592eb42b5da588fb4e07d09254aa40086db
+        url: https://github.com/abseil/abseil-cpp/archive/refs/tags/20250814.0.tar.gz
+        sha256: 9b2b72d4e8367c0b843fa2bcfa2b08debbe3cee34f7aaa27de55a6cbb3e843db
         x-checker-data:
           type: anitya
           project-id: 115295
@@ -67,8 +67,8 @@ modules:
       - -Dprotobuf_ABSL_PROVIDER=package
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v31.1/protobuf-31.1.tar.gz
-        sha256: 12bfd76d27b9ac3d65c00966901609e020481b9474ef75c7ff4601ac06fa0b82
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protobuf-32.0.tar.gz
+        sha256: 9dfdf08129f025a6c5802613b8ee1395044fecb71d38210ca59ecad283ef68bb
         x-checker-data:
           type: anitya
           project-id: 3715
