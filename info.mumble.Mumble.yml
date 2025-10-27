@@ -1,7 +1,7 @@
 id: info.mumble.Mumble
 rename-icon: mumble
 runtime: org.kde.Platform
-runtime-version: 5.15-24.08
+runtime-version: 5.15-25.08
 sdk: org.kde.Sdk
 command: mumble
 finish-args:
@@ -50,7 +50,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/protocolbuffers/protobuf/releases/download/v33.0/protobuf-33.0.tar.gz
-        sha256: 7a796fd9a7947d51e098ebb065d8f8b45ea0ac313ac89cc083456b3005329a1a
+        sha256: cbc536064706b628dcfe507bef386ef3e2214d563657612296f1781aa155ee07
         x-checker-data:
           type: anitya
           project-id: 3715
@@ -132,7 +132,7 @@ modules:
       - -Dplugins=ON
       - -DBUILD_NUMBER=857
       - -DBUILD_RELEASE_DATE=2025-10-22
-      - -DCMAKE_CXX_FLAGS="-Wno-error"
+      - -Dwarnings-as-errors=OFF
     sources:
       - type: archive
         url: https://github.com/mumble-voip/mumble/releases/download/v1.5.857/mumble-1.5.857.tar.gz
