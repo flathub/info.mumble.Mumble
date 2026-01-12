@@ -49,8 +49,8 @@ modules:
       - -Dprotobuf_BUILD_TESTS=OFF
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v33.3/protobuf-33.3.tar.gz
-        sha256: 1c9996fa0466206d5e4b8120b3fceb332369b64248e0649089aad586569d3896
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v33.4/protobuf-33.4.tar.gz
+        sha256: bc670a4e34992c175137ddda24e76562bb928f849d712a0e3c2fb2e19249bea1
         x-checker-data:
           type: anitya
           project-id: 3715
