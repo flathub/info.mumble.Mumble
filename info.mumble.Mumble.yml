@@ -34,8 +34,8 @@ modules:
   - name: boost
     sources:
       - type: archive
-        url: https://github.com/boostorg/boost/releases/download/boost-1.90.0/boost-1.90.0-cmake.tar.xz
-        sha256: aca59f889f0f32028ad88ba6764582b63c916ce5f77b31289ad19421a96c555f
+        url: https://github.com/boostorg/boost/releases/download/boost-1.91.0-1/boost-1.91.0-1-cmake.tar.xz
+        sha256: cc5dc5006ecbdf0051f90979be31b4eee5987d9ae14ae9fb9c03cfa43fa3cdad
         x-checker-data:
           type: anitya
           project-id: 6845
@@ -135,8 +135,8 @@ modules:
       - -Dwarnings-as-errors=OFF
     sources:
       - type: archive
-        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.901/mumble-1.5.901.tar.gz
-        sha256: fd8d31add7458d157a1087b2b163ccbd340db35708bb2fac16f10e22cbb120b9
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.6.870/mumble-1.6.870.tar.gz
+        sha256: cd4726e36538d09b2fa4f7445cbe0be5cb1fcf642c2ea31ae6a6ed04d60e2513
         x-checker-data:
           type: anitya
           project-id: 2032
