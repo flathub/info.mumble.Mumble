@@ -34,8 +34,8 @@ modules:
   - name: boost
     sources:
       - type: archive
-        url: https://github.com/boostorg/boost/releases/download/boost-1.91.0-1/boost-1.91.0-1-cmake.tar.xz
-        sha256: cc5dc5006ecbdf0051f90979be31b4eee5987d9ae14ae9fb9c03cfa43fa3cdad
+        url: https://github.com/boostorg/boost/releases/download/boost-1.92.0/boost-1.92.0-cmake.tar.xz
+        sha256: 9bed76128d4e46755dbe818487788c6fceb6f72b378f4daa49b7e1e600d9088d
         x-checker-data:
           type: anitya
           project-id: 6845
@@ -49,8 +49,8 @@ modules:
       - -Dprotobuf_BUILD_TESTS=OFF
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v35.1/protobuf-35.1.tar.gz
-        sha256: f0b6838e7522a8da96126d487068c959bc624926368f3024ac8fd03abd0a1ac4
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v36.0/protobuf-36.0.tar.gz
+        sha256: 399931c793f4ac6db81045b00b06dd07c877b48aeecf36c797f65c541fb533e7
         x-checker-data:
           type: anitya
           project-id: 3715
@@ -135,8 +135,8 @@ modules:
       - -Dwarnings-as-errors=OFF
     sources:
       - type: archive
-        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.915/mumble-1.5.915.tar.gz
-        sha256: 2cb3f0c7aa60e2f08fed1d568da7d1f5115e3658a079b6d1a5468c5d6e2081d5
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.6.870/mumble-1.6.870.tar.gz
+        sha256: cd4726e36538d09b2fa4f7445cbe0be5cb1fcf642c2ea31ae6a6ed04d60e2513
         x-checker-data:
           type: anitya
           project-id: 2032
