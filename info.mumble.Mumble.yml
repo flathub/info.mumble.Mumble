@@ -123,6 +123,33 @@ modules:
       - /bin/
       - /lib/cmake/
 
+  - name: "libspeechd"
+    config-opts:
+      - -disable-python
+      - -with-systemdsystemunitdir=''
+      - -disable-rpath
+      - -disable-static
+      - -with-kali=no
+      - -with-baratinoo=no
+      - -with-ibmtts=no
+      - -with-voxin=no
+      - -without-oss
+    sources:
+      - type: archive
+        url: https://github.com/brailcom/speechd/releases/download/0.12.1/speech-dispatcher-0.12.1.tar.gz
+        sha256: b14a5238d287d2dcce4dd42bbd66ca65fa228e7e683708267f7b34036f7ba4b4
+        x-checker-data:
+          type: anitya
+          project-id: 328138
+          stable-only: true
+          url-template: https://github.com/brailcom/speechd/releases/download/$version/speech-dispatcher-$version.tar.gz
+    cleanup:
+      - /bin/
+      - /etc/
+      - /lib/speech-dispatcher/
+      - /share/sounds/speech-dispatcher
+      - /share/speech-dispatcher
+
   - name: mumble
     buildsystem: cmake-ninja
     config-opts:
