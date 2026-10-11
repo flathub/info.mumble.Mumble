@@ -132,15 +132,16 @@ modules:
       - type: archive
         url: https://github.com/williamh/dotconf/archive/refs/tags/v1.4.1.tar.gz
         sha256: 5922c46cacf99b2ecc4853d28a2bda4a489292e73276e604bd9cba29dfca892d
-      - type: shell
-        commands:
-          - autoreconf -fiv
-        dest-filename: autogen.sh
         x-checker-data:
           type: anitya
           project-id: 13410
           stable-only: true
           url-template: https://github.com/williamh/dotconf/archive/refs/tags/v$version.tar.gz
+      - type: script
+        dest-filename: autogen.sh
+        commands:
+          - autoreconf -fiv
+
     cleanup:
       - "*"
 
