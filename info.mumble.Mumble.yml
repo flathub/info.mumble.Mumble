@@ -142,10 +142,7 @@ modules:
           stable-only: true
           url-template: https://github.com/williamh/dotconf/archive/refs/tags/v$version.tar.gz
     cleanup:
-      - /include
-      - /lib/*.la
-      - /lib/libdotconf*
-      - /lib/pkgconfig
+      - "*"
 
   - name: "libspeechd"
     config-opts:
