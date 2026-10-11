@@ -21,6 +21,7 @@ finish-args:
   - --talk-name=org.kde.StatusNotifierWatcher
   - --filesystem=xdg-run/pipewire-0:ro
   - --env=LD_LIBRARY_PATH=/app/lib/mumble/:/app/lib
+  - --filesystem=xdg-run/speech-dispatcher:ro
 separate-locales: false
 cleanup:
   - /include
