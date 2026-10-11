@@ -176,7 +176,6 @@ modules:
   - name: mumble
     buildsystem: cmake-ninja
     config-opts:
-      - -Dspeechd=OFF
       - -Dserver=OFF
       - -Doverlay=OFF
       - -Dplugins=ON
