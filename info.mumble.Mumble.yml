@@ -97,8 +97,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/JuliaStrings/utf8proc.git
-        tag: v2.11.3
-        commit: e5e799221b45bbb90f5fdc5c69b6b8dfbf017e78
+        tag: v2.12.0
+        commit: 79cdd5ab40c79afa559f689ffc13b76812dee1ac
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -143,9 +143,9 @@ modules:
           - autoreconf -fiv
 
     cleanup:
-      - "*"
+      - '*'
 
-  - name: "libspeechd"
+  - name: libspeechd
     config-opts:
       - -disable-python
       - -with-systemdsystemunitdir=''
