@@ -1,7 +1,7 @@
 id: info.mumble.Mumble
 rename-icon: mumble
 runtime: org.kde.Platform
-runtime-version: 5.15-25.08
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 command: mumble
 finish-args:
@@ -178,13 +178,13 @@ modules:
       - -Dserver=OFF
       - -Doverlay=OFF
       - -Dplugins=ON
-      - -DBUILD_NUMBER=939
-      - -DBUILD_RELEASE_DATE=2026-10-11
+      - -DBUILD_NUMBER=1001
+      - -DBUILD_RELEASE_DATE=2026-10-25
       - -Dwarnings-as-errors=OFF
     sources:
       - type: archive
-        url: https://github.com/mumble-voip/mumble/releases/download/v1.5.939/mumble-1.5.939.tar.gz
-        sha256: da181098ab062a44ab7f2b65ab2b65926898ebca5d8c665ca2ce50d38cd11414
+        url: https://github.com/mumble-voip/mumble/releases/download/v1.6.0-alpha2/mumble-1.6.1001.tar.gz
+        sha256: 6fbe7f9258dd480a918b868f925620b6dcc8a78e29a326f91d1f8a7842ce5b83
         x-checker-data:
           type: anitya
           project-id: 2032
